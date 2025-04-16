@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookEFApp.Dal;
 
-public class MyDbContext : DbContext
+public class MyDbContext : DbContext, IDalBookStore
 {
     public MyDbContext()
     {
@@ -85,5 +85,13 @@ public class MyDbContext : DbContext
         );
 
         base.OnModelCreating(modelBuilder);
+    }
+
+    public List<Auteur> GetAuteurs()
+    {
+        return base
+            .Set<Auteur>()
+            .Include(a => a.Livres)
+            .ToList();
     }
 }

@@ -27,9 +27,22 @@ var livresAvecAuteurNeApres1990 = context.Livres
     .ToList();
 
 Console.WriteLine();
-var year = 1990;
 Console.WriteLine($"Auteurs nés après 1990 : {livresAvecAuteurNeApres1990.Count}");
 foreach (var auteur in livresAvecAuteurNeApres1990)
+{
+    Console.WriteLine(auteur);
+}
+
+var livresAvecAuteurNeApres1990_2 = (
+    from p in context.Livres
+    join a in context.Auteurs on p.AuteurId equals a.Id
+    where a.DateNaissance > new DateOnly(1990, 12, 31)
+    select p
+).ToList();
+
+Console.WriteLine();
+Console.WriteLine($"Auteurs nés après 1990 : {livresAvecAuteurNeApres1990_2.Count}");
+foreach (var auteur in livresAvecAuteurNeApres1990_2)
 {
     Console.WriteLine(auteur);
 }
