@@ -1,6 +1,0 @@
-﻿services:
-  course:
-    image: course
-    build:
-      context: .
-      dockerfile: Course/Dockerfile
