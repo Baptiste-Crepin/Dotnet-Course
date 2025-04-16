@@ -4,8 +4,6 @@
     <TargetFrameworks>net9.0</TargetFrameworks>
     
     <IsPackable>false</IsPackable>
-    
-    <RootNamespace>Books.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,9 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AnimalApp.Models\AnimalApp.Models.csproj" />
-    <ProjectReference Include="..\BooksApp.Models\BooksApp.Models.csproj" />
-    <ProjectReference Include="..\BooksApp\BooksApp.csproj" />
+    <ProjectReference Include="..\CarBrands\CarBrands.csproj" />
   </ItemGroup>
   
 </Project>

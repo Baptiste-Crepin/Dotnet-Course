@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Car_brands\Car_brands.csproj" />
+    <ProjectReference Include="..\FizzBuzz\FizzBuzz.csproj" />
   </ItemGroup>
   
 </Project>
