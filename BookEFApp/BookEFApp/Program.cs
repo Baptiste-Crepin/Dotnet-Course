@@ -27,7 +27,8 @@ var livresAvecAuteurNeApres1990 = context.Livres
     .ToList();
 
 Console.WriteLine();
-Console.WriteLine($"Auteurs nés après 1900 : {livresAvecAuteurNeApres1990.Count}");
+var year = 1990;
+Console.WriteLine($"Auteurs nés après 1990 : {livresAvecAuteurNeApres1990.Count}");
 foreach (var auteur in livresAvecAuteurNeApres1990)
 {
     Console.WriteLine(auteur);
